@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#FFF">
+
+    <!-- HEADER BAR: Judul + Tombol Back -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#FFF"
+        android:gravity="center_vertical"
+        android:elevation="4dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Chat"
+            android:textStyle="bold"
+            android:textColor="#222"
+            android:textSize="20sp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Konten -->
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Memuat histori..."
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textColor="#888"
+        android:layout_gravity="center_horizontal"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GPT Mobile</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="send">Kirim</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="write_message">Tulis pesan...</string>
+</resources>

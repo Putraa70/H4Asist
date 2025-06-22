@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:padding="24dp"
+    android:background="#FAFAFD">
+
+    <!-- Header: Button Back, Judul, dan Tambah -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Kembali"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Project Saya"
+            android:textStyle="bold"
+            android:textColor="#222"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btnTambah"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Tambah"
+            android:textSize="14sp"
+            android:background="@drawable/bg_plus_gray"
+            android:textColor="#493A73"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <!-- Daftar project (dummy) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="• AI GPT Mobile\n• Chatbot WhatsApp\n• Website Rekomendasi Buku"
+        android:textColor="#333"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

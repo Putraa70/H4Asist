@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#FAFAFD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="32dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="H4 ASSIST"
+            android:textStyle="bold"
+            android:textColor="#101010"
+            android:textSize="20sp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masukan Email\ndan Sata Sandi"
+            android:textColor="#101010"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Email Field -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Alamat email:"
+            android:textColorHint="#249B44"
+            android:textColor="#249B44"
+            android:background="@drawable/bg_white_greenborder"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Kata sandi:"
+            android:textColorHint="#249B44"
+            android:textColor="#249B44"
+            android:background="@drawable/bg_white_greenborder"
+            android:inputType="textPassword"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Tombol Lanjutkan -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Lanjutkan"
+            android:backgroundTint="#249B44"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Divider -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   ATAU   "
+                android:textColor="#888"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"/>
+        </LinearLayout>
+
+        <!-- Button Google -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_white_border"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/btnGoogle">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_google"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Lanjutkan dengan Google"
+                android:textColor="#101010"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- Button Microsoft -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_white_border"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/btnMicrosoft">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"/>
+            <!--android:src="@drawable/ic_microsoft"-->
+            <!--android:layout_marginStart="12dp"/> -->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Lanjutkan dengan Akun Microsoft"
+            android:textColor="#101010"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <!-- Button Apple -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_white_border"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/btnApple">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"/>
+                <!-- android:src="@drawable/ic_apple" -->
+                <!-- android:layout_marginStart="12dp"/> -->
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Lanjutkan dengan Apple"
+                android:textColor="#101010"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

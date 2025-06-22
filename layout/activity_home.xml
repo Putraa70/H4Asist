@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF">
+
+        <LinearLayout
+            android:id="@+id/headerBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:background="#FFF"
+            android:gravity="center_vertical"
+            android:elevation="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <!-- Kiri: Hamburger -->
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@null"
+                android:src="@drawable/ic_menu"
+                android:contentDescription="Menu"/>
+
+            <!-- Spacer, biar tombol tidak mepet -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <!-- Tengah: Tombol Plus, KECIL, round, padding gede -->
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_plus_gray"
+                android:text="Dapatkan Plus"
+                android:textColor="#493A73"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:gravity="center"
+                android:elevation="0dp"
+                android:layout_gravity="center"/>
+
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <!-- Kanan: Chat & More -->
+            <ImageButton
+                android:id="@+id/btnChat"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@null"
+                android:src="@drawable/ic_chat"
+                android:contentDescription="Chat"/>
+
+            <ImageButton
+                android:id="@+id/btnMore"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@null"
+                android:src="@drawable/ic_more"
+                android:contentDescription="More"/>
+        </LinearLayout>
+
+
+        <!-- RecyclerView for chat bubbles -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/headerBar"
+            android:layout_above="@id/inputBar"
+            android:clipToPadding="false"
+            android:padding="12dp"
+            android:overScrollMode="never"
+            android:visibility="visible"/>
+
+        <!-- Prompt besar di tengah -->
+        <TextView
+            android:id="@+id/tvPrompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apa yang bisa saya bantu?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#222"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+        <!-- Input Chat Bottom, floating with rounded background -->
+        <LinearLayout
+            android:id="@+id/inputBar"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:background="#00FFFFFF"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp"
+            android:paddingTop="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_input_chat"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="center_vertical"
+                android:elevation="2dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <!-- Gambar upload -->
+                <ImageButton
+                    android:id="@+id/btnGallery"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_image"
+                    android:background="@null"
+                    android:contentDescription="Gambar"
+                    android:layout_marginEnd="4dp"/>
+
+                <!-- Setting (opsional) -->
+                <ImageButton
+                    android:id="@+id/btnSetting"
+                    android:layout_width="28dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_setting"
+                    android:background="@null"
+                    android:contentDescription="Setting"
+                    android:layout_marginEnd="6dp"/>
+
+                <!-- Input -->
+                <EditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="Tanyakan apa saja"
+                    android:textSize="17sp"
+                    android:textColor="#222"
+                    android:textColorHint="#BBB"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:inputType="text"
+                    android:maxLines="3"
+                    android:minLines="1"/>
+
+                <!-- Mic -->
+                <ImageButton
+                    android:id="@+id/btnVoice"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_mic"
+                    android:background="@null"
+                    android:contentDescription="Mic"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="2dp"/>
+
+                <!-- Voice/AI button -->
+                <ImageButton
+                    android:id="@+id/btnSend"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/send"
+                    android:background="@null"
+                    android:contentDescription="Voice"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        app:menu="@menu/drawer_menu"/>
+</androidx.drawerlayout.widget.DrawerLayout>

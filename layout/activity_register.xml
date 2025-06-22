@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRegister"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#362233"
+    android:padding="32dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Akun"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_grey_fill"
+        android:hint="Username"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBB"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_grey_fill"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBB"
+        android:layout_marginBottom="28dp"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_google"
+        android:text="Daftar"
+        android:textColor="#221E23"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnToLogin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_transparent_border"
+        android:text="Sudah punya akun? Masuk"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"/>
+</LinearLayout>

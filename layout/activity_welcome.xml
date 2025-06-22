@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#362233"
+    android:gravity="center">
+
+    <!-- Logo/Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="H4 ASSIST"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"/>
+
+        <!-- White Dot Next to Title -->
+        <View
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/white_circle"
+            android:layout_gravity="center_horizontal|bottom"/>
+    </LinearLayout>
+
+    <!-- Bottom Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bottom_card"
+        android:layout_gravity="bottom"
+        android:padding="24dp"
+        android:elevation="8dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:clipToPadding="false"
+        android:layout_marginBottom="0dp">
+
+        <!-- Google Login Button -->
+        <Button
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_google"
+            android:text="Lanjutkan dengan Google"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:drawableLeft="@drawable/ic_google"
+            android:drawablePadding="12dp"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- Daftar Button -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_grey_fill"
+            android:text="Daftar"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BBB"
+            android:layout_marginVertical="8dp"/>
+
+        <!-- Masuk Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_transparent_border"
+            android:text="Masuk"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#FAFAFD">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- HEADER: Back + Judul -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Kembali" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail H4 ASSIST"
+                android:textStyle="bold"
+                android:textColor="#222"
+                android:textSize="24sp"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <!-- Isi Detail -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aplikasi AI Mobile by H4 ASSIST adalah platform AI yang memudahkan anda membuat, menyimpan, dan mengelola chat AI serta project-project berbasis AI lainnya.\n\nFitur utama:\n- Chat seperti ChatGPT\n- Histori chat\n- Manajemen project\n- Integrasi API"
+            android:textColor="#333"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n Sistem ini di buat oleh: \n- Putra 2317051098\n- Rizky Firmansyah 2357051016\n- Bayu Ardi Ramadhani 2357051008 \n- Mubharak Al-ilhami 2357051003"
+            android:textColor="#333"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</ScrollView>
